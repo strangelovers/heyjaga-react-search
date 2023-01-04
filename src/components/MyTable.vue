@@ -48,4 +48,35 @@ export default {
       );
 
       let newData = Array.from(cryptos);
-      for (var i = 0; i < cryptos
+      for (var i = 0; i < cryptos.length; i++) {
+        newData[i].quote.USD.price = +cryptos[i].quote.USD.price.toFixed(2);
+        newData[i].quote.USD.percent_change_24h = +cryptos[
+          i
+        ].quote.USD.percent_change_24h.toFixed(2);
+
+        newData[i].quote.USD.market_cap =
+          +cryptos[i].quote.USD.market_cap.toString().slice(0, 3) + "B";
+      }
+      return newData;
+    }
+  }
+};
+</script>
+
+<style scoped>
+>>> .theme--light.v-data-table thead tr th {
+  color: black;
+  font-weight: 400;
+}
+.mytable {
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+  opacity: 0.6;
+
+  color: white !important;
+}
+.v-data-table td {
+  font-size: 1.2em;
+}
+</style>
