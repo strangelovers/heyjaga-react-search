@@ -24,4 +24,31 @@
       <div class="flex-grow-1"></div>
       <template>
         <router-link v-if="logged" :to="loginlink.route" tag="v-btn">
-   
+          <v-btn v-if="logged" @click="logOut" icon>
+            <v-icon>mdi-logout-variant</v-icon>
+          </v-btn>
+        </router-link>
+        <!-- <router-link v-else :to="links[1].route" tag="v-btn"></router-link> -->
+      </template>
+    </v-app-bar>
+  </div>
+</template>
+
+<script>
+import firebase from "firebase";
+import { mapGetters } from "vuex";
+export default {
+  name: "Navbar",
+  data() {
+    return {
+      // logged: false,
+      titlelink: { text: "CRYPTO$PLAY", route: "/" },
+      loginlink: { route: "/login" },
+      links: [
+        { text: "About", route: "/about", icon: "mdi-information" },
+        { text: "Chat", route: "/login", icon: "mdi-chat-processing" },
+        { text: "Contact", route: "/contact", icon: "mdi-phone" }
+      ]
+    };
+  },
+ 
