@@ -51,4 +51,45 @@ export default {
       ]
     };
   },
- 
+  methods: {
+    logOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(user => {
+          this.$store.commit("logged", false);
+          this.$router.push("/login");
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
+  },
+  computed: {
+    ...mapGetters(["logged"])
+  }
+};
+</script>
+
+
+<style scoped>
+img {
+  width: 100px;
+  height: 50px;
+}
+>>> .v-btn__content {
+  font-weight: 800;
+  font-size: 1.2em;
+  font-stretch: expanded;
+  color: #052f47;
+}
+.navbar {
+  background-color: #cffcfc !important;
+  opacity: 0.8;
+}
+h4,
+a {
+  text-decoration: none !important;
+  color: #052f47;
+}
+</style>
