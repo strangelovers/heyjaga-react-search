@@ -17,4 +17,10 @@
       <p>
         Decentralized cryptocurrency is produced by the entire cryptocurrency system collectively, at a rate which is defined
         when the system is created and which is publicly known. In centralized banking and economic systems such as the Federal Reserve
-        System, corporate boards or governments control the supply 
+        System, corporate boards or governments control the supply of currency by printing units of fiat money or demanding additions to
+        digital banking ledgers. In case of decentralized cryptocurrency, companies or governments cannot produce new units, and have
+        not so far provided backing for other firms, banks or corporate entities which hold asset value measured in it. The underlying
+        technical system upon which decentralized cryptocurrencies are based was created by the group or individual known as Satoshi
+        Nakamoto. As of May 2018, over 1,800 cryptocurrency specifications existed.[24] Within a cryptocurrency system, the safety,
+        integrity and balance of ledgers is maintained by a community of mutually distrustful parties referred to as miners: who use
+        their computers to help validate and timestamp tr
