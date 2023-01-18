@@ -23,4 +23,13 @@
         technical system upon which decentralized cryptocurrencies are based was created by the group or individual known as Satoshi
         Nakamoto. As of May 2018, over 1,800 cryptocurrency specifications existed.[24] Within a cryptocurrency system, the safety,
         integrity and balance of ledgers is maintained by a community of mutually distrustful parties referred to as miners: who use
-        their computers to help validate and timestamp tr
+        their computers to help validate and timestamp transactions, adding them to the ledger in accordance with a particular
+        timestamping scheme. Most cryptocurrencies are designed to gradually decrease production of that currency, placing a cap on the
+        total amount of that currency that will ever be in circulation.[25] Compared with ordinary currencies held by financial
+        institutions or kept as cash on hand, cryptocurrencies can be more difficult for seizure by law enforcement. This difficulty is
+        derived from leveraging cryptographic technologies.
+      </p>
+      <h2 class="font-italic font-weight-medium">Mining</h2>
+      <p>
+        In cryptocurrency networks, mining is a validation of transactions. For this effort, successful miners obtain new cryptocurrency
+        as a reward.
