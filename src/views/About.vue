@@ -32,4 +32,10 @@
       <h2 class="font-italic font-weight-medium">Mining</h2>
       <p>
         In cryptocurrency networks, mining is a validation of transactions. For this effort, successful miners obtain new cryptocurrency
-        as a reward.
+        as a reward. The reward decreases transaction fees by creating a complementary incentive to contribute to the processing power of
+        the network. The rate of generating hashes, which validate any transaction, has been increased by the use of specialized machines
+        such as FPGAs and ASICs running complex hashing algorithms like SHA-256 and Scrypt. This arms race for cheaper-yet-efficient
+        machines has been on since the day the first cryptocurrency, bitcoin, was introduced in 2009. With more people venturing into the
+        world of virtual currency, generating hashes for this validation has become far more complex over the years, with miners having to
+        invest large sums of money on employing multiple high performance ASICs. Thus the value of the currency obtained for finding a hash
+   
