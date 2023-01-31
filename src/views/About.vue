@@ -52,4 +52,40 @@
       <v-btn outlined dark>Back to Home</v-btn>
     </router-link>
   </div>
-</templat
+</template>
+
+<script>
+// @ is an alias to /src
+
+export default {
+  name: "about",
+  props: {
+    msg: String
+  },
+  data() {
+    return {
+      readMore: false
+    };
+  }
+};
+</script>
+<style scoped>
+.about {
+  margin: 15px;
+}
+p {
+  text-align: justify;
+}
+
+h2 {
+  margin-top: 20px;
+  color: white;
+}
+.about a {
+  text-decoration: none;
+  color: black;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+</style>
