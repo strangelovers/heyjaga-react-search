@@ -38,4 +38,18 @@
         machines has been on since the day the first cryptocurrency, bitcoin, was introduced in 2009. With more people venturing into the
         world of virtual currency, generating hashes for this validation has become far more complex over the years, with miners having to
         invest large sums of money on employing multiple high performance ASICs. Thus the value of the currency obtained for finding a hash
-   
+        often does not justify the amount of money spent on setting up the machines, the cooling facilities to overcome the enormous amount
+        of heat they produce, and the electricity required to run them.Some miners pool resources, sharing their processing power over a
+        network to split the reward equally, according to the amount of work they contributed to the probability of finding a block.
+        A "share" is awarded to members of the mining pool who present a valid partial proof-of-work.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Cryptocurrency" target="_blank">
+        <h2>More Information</h2>
+      </a>
+    </template>
+    <br />
+    <router-link to="/" tag="button">
+      <v-btn outlined dark>Back to Home</v-btn>
+    </router-link>
+  </div>
+</templat
