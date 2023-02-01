@@ -10,4 +10,35 @@
       <v-row>
         <v-col>
           <p>
-            Would you like to connect to
+            Would you like to connect to other traders of cryptocurrency?
+            Have ideas or questions regarding mining of cryptos or architecture of the industry?
+          </p>
+          <p>Our secure chat gives you access to thousands of cryptolovers just like you!</p>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+</template>
+
+
+<script>
+import firebase from "firebase";
+import { mapGetters } from "vuex";
+import { mapSetters } from "vuex";
+
+export default {
+  name: "chat",
+  props: {
+    msg: String
+  },
+  methods: {
+    redirectToLog() {
+      this.$router.push({ name: "login" });
+    },
+    login() {
+      this.loading = true;
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then(user => {
