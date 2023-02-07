@@ -42,3 +42,41 @@ export default {
         .auth()
         .signInWithPopup(provider)
         .then(user => {
+          console.log(user);
+          this.$store.commit("logged", true);
+          this.$router.push({ name: "login" });
+          this.getMessages();
+        })
+        .catch(err => {
+          alert(err);
+          this.loading = false;
+        });
+    },
+    getMessages() {
+      this.loading = true;
+      firebase
+        .database()
+        .ref("chat")
+        .on("value", data => {
+          this.messages = data.val();
+          this.$store.dispatch("setMessages", data.val());
+          this.loading = false;
+        });
+      console.log("gfgfgf");
+    }
+  },
+  computed: {
+    ...mapGetters(["logged", "chat"])
+  }
+};
+</script>
+<style scoped>
+h1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 1.2em;
+}
+.theme--light.v-input:not(.v-input--is-disabled) input,
+.them
