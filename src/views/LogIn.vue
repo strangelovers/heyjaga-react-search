@@ -28,4 +28,22 @@
           <v-col>
             <p>
               Would you like to connect to other traders of cryptocurrency?
-              Ha
+              Have ideas or questions regarding mining of cryptos or architecture of the industry?
+            </p>
+            <p>Our secure chat gives you access to thousands of cryptolovers just like you!</p>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>-->
+
+    <!-- <v-col>
+      <v-btn @click="logOut" v-if="logged" class="elevation-5">LogOut</v-btn>
+    </v-col>-->
+
+    <div v-if="logged" class="chatroom" v-chat-scroll="{always: false, smooth: true}">
+      <div v-if="loading" id="spinner"></div>
+      <div class="message" v-for="message in messages" :key="message.id">
+        <v-col class="bubble right">
+          <img :src="message.foto" alt="profile" width="25px" rounded />
+          <p class="name">{{ message.name}}</p>
+          <span>{{ message.currentdate}}<
