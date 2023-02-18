@@ -46,4 +46,40 @@
         <v-col class="bubble right">
           <img :src="message.foto" alt="profile" width="25px" rounded />
           <p class="name">{{ message.name}}</p>
-          <span>{{ message.currentdate}}<
+          <span>{{ message.currentdate}}</span>
+          <p class="text">{{message.text}}</p>
+        </v-col>
+      </div>
+    </div>
+
+    <div class="form" v-if="logged">
+      <input v-model="message" type="text" placeholder="enter message" justify="space-around" />
+      <v-btn
+        v-if="logged"
+        @click="sendMessage"
+        class="elevation-5"
+        large
+        justify="space-around"
+      >Send</v-btn>
+    </div>
+    <v-snackbar v-model="snackbar">
+      {{ text }}
+      <v-btn color="white" text @click="snackbar = false">Close</v-btn>
+    </v-snackbar>
+    <!-- </v-container> -->
+  </div>
+</template>
+
+<script>
+import firebase from "firebase";
+import VueChatScroll from "vue-chat-scroll";
+
+import { mapGetters } from "vuex";
+
+export default {
+  data() {
+    return {
+      //logged: false,
+      message: "",
+      messages: [],
+      loa
