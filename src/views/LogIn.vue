@@ -110,4 +110,38 @@ export default {
 
       // this.currentdate = todaydate.toString();
       // this.currentdate = this.currentdate.substring(0, 10);
-     
+      // console.log(todaydate.getHours());
+      //this.todaydate.substring(0, 10);
+    },
+    login() {
+      this.loading = true;
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then(user => {
+          console.log(user);
+          this.$store.commit("logged", true);
+          this.getMessages();
+        })
+        .catch(err => {
+          alert(err);
+          this.loading = false;
+        });
+    },
+    logOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(user => {
+          this.$store.commit("logged", false);
+          this.messages = [];
+          this.message = "";
+          this.$router.push("/login");
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    },
+    getMessages() {
+ 
