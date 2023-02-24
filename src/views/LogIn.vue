@@ -82,4 +82,32 @@ export default {
       //logged: false,
       message: "",
       messages: [],
-      loa
+      loading: false,
+      currentdate: "",
+      snackbar: false,
+      text: "Please enter your message"
+    };
+  },
+  methods: {
+    getDate() {
+      var todaydate = new Date();
+      var hours = todaydate.getHours();
+      var minutes = todaydate.getMinutes();
+      var ampm = hours >= 12 ? "pm" : "am";
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      var strTime = hours + ":" + minutes + " " + ampm;
+      this.currentdate =
+        todaydate.getMonth() +
+        1 +
+        "/" +
+        todaydate.getDate() +
+        "/" +
+        todaydate.getFullYear() +
+        "  " +
+        strTime;
+
+      // this.currentdate = todaydate.toString();
+      // this.currentdate = this.currentdate.substring(0, 10);
+     
