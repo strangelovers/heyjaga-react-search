@@ -144,4 +144,33 @@ export default {
         });
     },
     getMessages() {
- 
+      this.loading = true;
+      firebase
+        .database()
+        .ref("chat")
+        .on("value", data => {
+          this.messages = data.val();
+          this.loading = false;
+        });
+      console.log("gfgfgf");
+    },
+
+    sendMessage() {
+      if (this.logged == false) {
+        alert("you are not logged in");
+        this.message = "";
+        return;
+      } else if (this.logged == true && this.message.length == 0) {
+        this.snackbar = true;
+        return;
+      }
+      this.getDate();
+      console.log(firebase.auth().currentUser);
+      let obj = {
+        text: this.message,
+        name: firebase.auth().currentUser.displayName,
+        foto: firebase.auth().currentUser.photoURL,
+        currentdate: this.currentdate
+      };
+      firebase
+        .database(
