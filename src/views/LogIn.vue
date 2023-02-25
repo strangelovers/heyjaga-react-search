@@ -173,4 +173,54 @@ export default {
         currentdate: this.currentdate
       };
       firebase
-        .database(
+        .database()
+        .ref("chat")
+        .push(obj);
+      this.message = "";
+    }
+  },
+  computed: {
+    ...mapGetters(["logged"])
+  },
+  // watch: {
+  //   logged: function(value) {
+  //     if (value) {
+  //       console.log(value);
+  //       this.getMessages();
+  //     } else {
+  //       this.messages = [];
+  //       this.message = "";
+  //     }
+  //   }
+  // },
+  created() {
+    this.getMessages();
+  }
+};
+</script>
+
+<style scoped>
+h1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 1.2em;
+}
+.container {
+  position: absolute;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.form {
+  display: flex;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: fixed;
+  bottom: 0;
+  /* background-color: white; */
+  width
