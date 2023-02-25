@@ -223,4 +223,59 @@ p {
   position: fixed;
   bottom: 0;
   /* background-color: white; */
-  width
+  width: 100%;
+}
+.form > input[type="text"] {
+  flex: 1 1 auto;
+  border: 1px solid #695c5c;
+
+  background-color: white;
+  color: #695c5c;
+}
+
+input {
+  border: 1px solid white;
+  padding: 5px;
+}
+img {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.chatroom {
+  height: 500px;
+  width: auto;
+  border: 1px solid none;
+  margin-top: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  width: auto;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: auto;
+  margin: 3px;
+  list-style: none;
+  word-break: break-all;
+}
+
+p.name {
+  font-size: 1.3em;
+  display: inline;
+  margin-right: 5px;
+}
+p.text {
+  display: block;
+}
+
+/* transition: background-color 0.5s; */
+
+/*position: relative;*/
+
+/* SPINNER */
+#spinner {
+  visibility: visible;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f
